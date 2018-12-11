@@ -4,7 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '2'))
   }
   stages {
-     stage('Test') {
+    stage('Test') {
       agents { label 'nodejs-app' }
       steps {
         container('nodejs') {
@@ -12,6 +12,7 @@ pipeline {
           sh 'node --version'
         }
       }
+    }
     }
     stage('Build and Push Image') {
       when {
