@@ -43,9 +43,6 @@ pipeline {
       input {
         message "Should we deploy?"
       }
-      steps {
-        echo "Continuing with deployment - approved by ${APPROVER}"
-      }
     }
   }
 }
