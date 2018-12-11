@@ -43,6 +43,9 @@ pipeline {
       input {
         message "Should we deploy?"
       }
+      steps {
+       echo "deploy deploy"
+      }
     }
   }
 }
